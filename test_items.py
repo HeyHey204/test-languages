@@ -9,12 +9,8 @@ class TestParams():
     def test_params(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         browser.get(link)
-        browser.implicitly_wait(10)
 
-        time.sleep(5)
-        button = WebDriverWait(browser, 5).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, "button.btn-add-to-basket")))
+        button = browser.find_elements_by_css_selector(
+            ".btn-adsd-to-basket")
 
-        assert button != False, "Where is my button?"
-
-        print("--Button exist--")
+        assert button, "\n---Where is my button?!---"
