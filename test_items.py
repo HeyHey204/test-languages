@@ -6,11 +6,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class TestParams():
-    def test_params(self, browser):
+    def test_card_button(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         browser.get(link)
 
-        # time.sleep(30)
+        time.sleep(10)
         button = browser.find_elements_by_css_selector(
             ".btn-add-to-basket")
 
