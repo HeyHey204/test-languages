@@ -11,6 +11,6 @@ class TestParams():
         browser.get(link)
 
         button = browser.find_elements_by_css_selector(
-            ".btn-adsd-to-basket")
+            ".btn-add-to-basket")
 
         assert button, "\n---Where is my button?!---"
